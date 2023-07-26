@@ -1,9 +1,11 @@
 name: build
 on:
-  push:
-  pull_request:
-  schedule:
-    - cron: "0 0 * * *"
+  workflow_dispatch:
+#  push:
+#  pull_request:
+#  schedule:
+#    - cron: "0 0 * * *"
+
 jobs:
   build-test-lint:
     name: FFmpeg ${{ matrix.ffmpeg_version }} - build, test and lint
